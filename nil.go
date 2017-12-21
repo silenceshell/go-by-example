@@ -17,6 +17,9 @@ func main() {
 		// output is "x_i is nil"
 	}
 
+	var x_string string
+	fmt.Println("begin" + x_string + "end")
+
 	var x_s xxx_s
 
 	// uncomment below codes, you will get an compile error: cannot convert nil to type xxx_s
