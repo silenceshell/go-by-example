@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+
 func main() {
 	in := `first_name,last_name,username
 "Rob","Pike",rob
@@ -28,5 +29,7 @@ Ken,Thompson,ken
 		fmt.Println(record)
 		fmt.Println(record[0])
 	}
+	fmt.Println("===============")
+
 }
 
