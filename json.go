@@ -23,6 +23,7 @@ func main() {
 		panic(err)
 	}
 
+	//result := []byte(`{"result":{"company":"Apple, Inc.","mac_prefix":"08:74:02","address":"1 Infinite Loop,Cupertino  CA  95014,US","start_hex":"087402000000","end_hex":"087402FFFFFF","country":"US","type":"MA-L"}}`)
 	result, err := ioutil.ReadAll(resp.Body)
 	if err!= nil {
 		panic(err)
