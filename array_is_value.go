@@ -37,4 +37,13 @@ func main() {
 	}(x2)
 	fmt.Println(x2)
 
+	var x3 [2][3]int = [2][3]int {{1, 2, 3}, {4, 5, 6}}
+	fmt.Println(x3)
+
+	var x4 [][]int = make([][]int, 3)
+	for i := 0; i<3; i++ {
+		x4[i] = make([]int, 10)
+	}
+	fmt.Println(x4)
+
 }
