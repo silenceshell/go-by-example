@@ -27,7 +27,10 @@ func main() {
 	fmt.Println(x)
 
 	// slice is not array.
-	var x2 []int = []int {1, 2, 3}
+	var x2 []int = []int {1,
+		2,
+		3, //this comma can not be omitted for multi-line .
+	}
 	//var x2 []int = make([]int, 3)
 	//x2[0], x2[1], x2[2] = 1, 2, 3
 	fmt.Println(reflect.TypeOf(x2))
