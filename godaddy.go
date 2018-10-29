@@ -20,7 +20,7 @@ func httpGet(url, key, secret string) ([]byte, error) {
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
-	client := &http.Client{Transport: tr, Timeout: time.Second * 10}
+	client := &http.Client{Transport: tr, Timeout: time.Second * 120}
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -49,7 +49,7 @@ func httpPost(url, body, key, secret string) error {
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
-	client := &http.Client{Transport: tr, Timeout: time.Second * 10}
+	client := &http.Client{Transport: tr, Timeout: time.Second * 120}
 
 	req, err := http.NewRequest("PUT", url, strings.NewReader(body))
 	if err != nil {
@@ -112,7 +112,8 @@ func getGodaddy(key, secret string) (string, error) {
 }
 
 func main() {
-	ticker := time.NewTicker(time.Hour)
+	//ticker := time.NewTicker(time.Hour)
+	ticker := time.NewTicker(3 * time.Minute)
 
 	if len(os.Args) != 3 {
 		log.Println("needs key and secret")
